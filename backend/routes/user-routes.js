@@ -5,6 +5,9 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
+// Load input validation
+const validateRegisterInput = require('../validation/register');
+
 const keys = require('../config/keys');
 
 // Import User Model
@@ -23,6 +26,13 @@ router.get('/test', (req, res) => {
 // @desc Register a user account
 // @access public
 router.post('/register', (req, res) => {
+    const { errors, isValid } = validateRegisterInput(req.body);
+
+    // Check validation
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({
         email: req.body.email
     })
