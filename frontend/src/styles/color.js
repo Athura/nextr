@@ -1,0 +1,18 @@
+// Main theming -- https://www.colourhunt.com/palette/cjf9fztmifrj501085ounry1s
+// Gives our website a friendly beach feel
+// Later on we can possibly add theming for times of the year so obviously the provided colors below are for summer/spring
+
+// https://coolors.co/75dddd-508991-172a3a-004346-09bc8a
+// Switched to using styled-components-theme library to handle theming. rgb wasn't a recognized definition. Now we will add a ThemeProvider to our index.js to handle the theming from here
+const colors = {
+    lightblue: '#75DDDD',
+    darkgrey: '#508991',
+    darkblue: '#172A3A',
+    darkgreen: '#004346',
+    lightgreen: '#09BC8A',
+    warning: '#DC143C',
+    success: '#7FFF00',
+    information: '#F0E68C'
+};
+
+export default colors;

@@ -99,6 +99,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
 
     if (req.body.handle) profileFields.handle = req.body.handle;
     if (req.body.location) profileFields.location = req.body.location;
+    if (req.body.budget) profileFields.budget = req.body.budget;
     if (req.body.status) profileFields.status = req.body.status;
     // Preferences - split into an array
     if (typeof req.body.preferences !== 'undefined') {

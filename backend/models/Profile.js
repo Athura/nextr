@@ -15,6 +15,10 @@ const ProfileSchema = new Schema({
     location: {
         type: String
     },
+    budget: {
+        type: Number,
+        required: true
+    },
     status: {
         type: String,
         required: true
