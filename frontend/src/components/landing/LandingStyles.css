@@ -1,0 +1,17 @@
+.background {
+    height: 80vh;
+    background-image: url("../../imgs/backyard-house-lights-32870.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 100;
+}
+    
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 90vh;
+    z-index: 2;
+}

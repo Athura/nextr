@@ -4,7 +4,7 @@
 
 // https://coolors.co/75dddd-508991-172a3a-004346-09bc8a
 // Switched to using styled-components-theme library to handle theming. rgb wasn't a recognized definition. Now we will add a ThemeProvider to our index.js to handle the theming from here
-const colors = {
+ const colors = {
     lightblue: '#75DDDD',
     darkgrey: '#508991',
     darkblue: '#172A3A',
@@ -14,5 +14,23 @@ const colors = {
     success: '#7FFF00',
     information: '#F0E68C'
 };
+
+// https://blog.visme.co/website-color-schemes/ -- number 25
+// const vibrant = {
+//     yellow: '#F8E9A1',
+//     pink: '#F76C6C',
+//     lightblue: '#A8D0E6',
+//     lightdark: '#374785',
+//     darkblue: '#24305E',
+//     warning: '#DC143C',
+//     success: '#7FFF00',
+//     information: '#F0E68C'
+// };
+
+// const common = {
+//     warning: '#DC143C',
+//     success: '#7FFF00',
+//     information: '#F0E68C'
+// };
 
 export default colors;

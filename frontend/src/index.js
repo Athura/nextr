@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import color from './styles/color';
+import  colors  from './styles/color';
 
 
 import App from './App';
@@ -12,7 +12,7 @@ const rootEl = document.getElementById('root');
 
 let render = () => {
     ReactDOM.render(
-        <ThemeProvider theme = { color }>
+        <ThemeProvider theme = { colors }>
             <Router>
                 <App />
             </Router>
