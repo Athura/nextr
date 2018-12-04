@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import media from '../media';
 
-export const pagewrapper = styled.div`
+export const PageWrapper = styled.div`
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
