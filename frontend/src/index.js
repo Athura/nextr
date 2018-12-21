@@ -10,6 +10,7 @@ import * as serviceWorker from './serviceWorker';
 
 const rootEl = document.getElementById('root');
 
+
 let render = () => {
     ReactDOM.render(
         <ThemeProvider theme = { colors }>
