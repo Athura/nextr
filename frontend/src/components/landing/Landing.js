@@ -6,20 +6,10 @@ const Landing = () => {
     return (
         <div>
             <header>
-                <nav>
-                    <div className="row">
-                        <ul className="main-nav">
-                            <li><a href="/">Food Delivery</a></li>
-                            <li><a href="/">How It Works</a></li>
-                            <li><a href="/">Our Cities</a></li>
-                            <li><a href="/">Sign Up</a></li>
-                        </ul>
-                    </div>
-                </nav>
                 <div className="hero-text-container">
-                    <h1>Goodbye junk food. <br></br> Hello super unhealthy food.</h1>
-                    <a className ="btn btn-full" href="/">Sign Me Up!</a>
-                    <a className ="btn btn-ghost" href="/">Login</a>
+                    <h1>Tired of endlessly searching for bars? <br></br> Look no more.</h1>
+                    <a className ="btn btn-full" href="/register">Sign Me Up!</a>
+                    <a className ="btn btn-ghost" href="/login">Login</a>
                 </div>
             </header>
         </div>

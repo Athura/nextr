@@ -1,7 +1,4 @@
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
-}
+
 
 h1 {
     margin-top: 0;
@@ -12,7 +9,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 3px;
-    
+    font-family: 'Lato';
 }
 
 /*      --------------------------------------------------------------------------------------- */
@@ -27,6 +24,7 @@ h1 {
     text-decoration: none;
     border-radius: 200px;
     transition: background-color 1s, border 1s, color 1s;
+    font-family: 'Lato';
 }
 
 .btn-full:link,
@@ -59,11 +57,14 @@ h1 {
     color: #fff;
 }
 
+
+
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/alcohol-architecture-bar-260922.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../styles/img/alcohol-architecture-bar-260922.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
+    font-family: 'Lato';
 }
 
 .hero-text-container {
@@ -74,29 +75,3 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 55px;
-}
-
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-    padding: 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 120%;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom .5s;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #e67e22;
-}
