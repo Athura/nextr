@@ -23,9 +23,9 @@ class App extends Component {
         <GlobalStyles />
 
             <StyledContainer className="container">
-            <AppBar />
-              <Route exact path="/register" component={ Register } />
-              <Route exact path="/login" component={ Login } />
+                <AppBar />
+                <Route exact path="/register" component={ Register } />
+                <Route exact path="/login" component={ Login } />
             </StyledContainer>
         </StyledApp>
       </Router>

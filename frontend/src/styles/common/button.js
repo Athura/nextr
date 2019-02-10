@@ -2,27 +2,23 @@ import styled, { css } from 'styled-components';
 import theme from '../theme';
 import { moveInLeft } from '../animations';
 
-export const Button = styled.a`
+export const Button = styled.button`
     padding: 0.70em 1.5em;
-    margin: 300px 1em;
+    margin-top: 6em 1em;
     background: transparent;
     color: #FFF;
     cursor: pointer;
-    border-radius: 20px;
-
-    ${props => props.landing && css`
-        background: ${theme.darkgrey};
-        color: ${theme.information};
-        animation: ${moveInLeft} 2s;
-        position: absolute;
-        bottom: 10px;
-    `};
+    border-radius: 10px;
+    border-color: ${theme.pink};
 
     ${props => props.signup && css`
-        background-image: linear-gradient(to top right, ${theme.midblue}, ${theme.lightblue});
+        position: relative;
+        /*background-image: linear-gradient(to top right, ${theme.midblue}, ${theme.lightblue}); */
     `}
 
     ${props => props.register && css`
-        background-image: linear-gradient(to top right, ${theme.salmon}, ${theme.purple})
+        position: relative;
+        margin-right: 40px;
+        /*background-image: linear-gradient(to top right, ${theme.salmon}, ${theme.purple}) */
     `}
 `;

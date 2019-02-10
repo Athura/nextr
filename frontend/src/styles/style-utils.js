@@ -1,5 +1,5 @@
 // This is used to create ellipsi
-export function truncate(width) {
+ function truncate(width) {
     return `
       width: ${width};
       white-space: nowrap;
@@ -14,6 +14,8 @@ export function truncate(width) {
     //   ${boxShadowMixin}
     //   ${boxShadowMixinFunc(0, 0, 4, 'rgba(0, 0, 0, 0.5)')}
     // `;
-  export const boxShadowMixinFunc = (top, left, blur, color, inset = false) => {
+ function boxShadowMixinFunc(top, left, blur, color, inset = false) {
     return `box-shadow: ${inset ? 'inset' : ''} ${top}px ${left}px ${blur}px ${color};`;
   }
+
+  export default {truncate, boxShadowMixinFunc};
