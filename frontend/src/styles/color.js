@@ -4,10 +4,15 @@
 
 // https://coolors.co/75dddd-508991-172a3a-004346-09bc8a
 // Switched to using styled-components-theme library to handle theming. rgb wasn't a recognized definition. Now we will add a ThemeProvider to our index.js to handle the theming from here
- const colors = {
-    lightblue: '#75DDDD',
+const colors = {
+    lightblue: '#17A4C2',
+    midblue: '#135ACE',
+    purple: '#A04CF5',
+    midnight: '#1A3F5A',
+    darkpurple: '#734F9D',
+    salmon: '#F6485A',
     darkgrey: '#508991',
-    darkblue: '#172A3A',
+    darkblue: '#333DF5',
     darkgreen: '#004346',
     lightgreen: '#09BC8A',
     warning: '#DC143C',

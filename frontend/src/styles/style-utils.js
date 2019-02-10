@@ -16,4 +16,4 @@ export function truncate(width) {
     // `;
   export const boxShadowMixinFunc = (top, left, blur, color, inset = false) => {
     return `box-shadow: ${inset ? 'inset' : ''} ${top}px ${left}px ${blur}px ${color};`;
-   }
+  }

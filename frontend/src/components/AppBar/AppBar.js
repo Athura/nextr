@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Bar from '../../styles/img/bar.svg';
+import undraw from '../../styles/img/undraw_super_thank_you_obwk.svg';
+import { Button } from '../../styles/common/button';
 import './styles.css';
 
 class AppBar extends Component {
@@ -7,12 +8,10 @@ class AppBar extends Component {
     return (
         <nav>
             <div className="row">
-            <img src={Bar} alt="logo" className="logo" />
+            <img src={undraw} alt="logo" className="logo" />
                 <ul className="main-nav">
-                    <li><a href="/">Food Delivery</a></li>
-                    <li><a href="/">How It Works</a></li>
-                    <li><a href="/">Our Cities</a></li>
-                    <li><a href="/">Sign Up</a></li>
+                  <Button signup>Sign up</Button>
+                  <Button register>Register</Button>
                 </ul>
             </div>
         </nav>
