@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from './theme';
+import background from './img/kira-auf-der-heide-475677-unsplash.jpg'
 
 export const StyledApp = styled.div`
     text-align: center;
@@ -14,19 +15,19 @@ export const StyledApp = styled.div`
 `;
 
 export const StyledContainer = styled.div`
-    background-image : radial-gradient(
-        circle at top,
-        ${theme.top} 1%,
-        ${theme.middle} 30%,
-        black );
+    background-image : url(${background});
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: absolute;
+    opacity: 0.75;
 
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
 
-    margin: 10%;
+    margin: 5%;
 
     min-height: 200px;
     min-width: 500px;

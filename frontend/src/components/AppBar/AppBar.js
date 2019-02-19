@@ -14,9 +14,9 @@ class AppBar extends Component {
                   <Button about>About</Button>
                   <div className="push">
                     <Button signup border>
-                      <FontAwesomeIcon icon="igloo" />
+                      <FontAwesomeIcon icon={['fab', 'twitter']} className="social-media fa-lg" />
                     <span>
-                        Register
+                        Follow
                       </span></Button>
                     <Button register border>Register</Button>
                   </div>
