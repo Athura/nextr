@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 import { StyledApp, StyledContainer } from './styles/App.styles';
 import AppBar from './components/AppBar/AppBar';
+import Landing from './components/Landing/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 
 class App extends Component {
   render() {
 
-    library.add(faIgloo)
+    library.add(faFacebookSquare)
 
     const GlobalStyles = createGlobalStyle`
       body {
@@ -28,6 +29,7 @@ class App extends Component {
 
             <StyledContainer className="container">
               <AppBar />
+                <Route exact path="/" component={Landing} />
                 <Route exact path="/register" component={ Register } />
                 <Route exact path="/login" component={ Login } />
             </StyledContainer>

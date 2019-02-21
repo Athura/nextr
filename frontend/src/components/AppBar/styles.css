@@ -21,6 +21,10 @@
     margin-left: auto;
 }
 
+.margin-right {
+    padding: 20px;
+}
+
 .social-media {
     margin-right: 10px;
     background: -webkit-linear-gradient(#9c47fc, #356ad2);

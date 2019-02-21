@@ -20,7 +20,7 @@ export const StyledContainer = styled.div`
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
-    opacity: 0.75;
+    /*filter: brightness(50%); */
 
     left: 0;
     right: 0;
@@ -29,7 +29,7 @@ export const StyledContainer = styled.div`
 
     margin: 5%;
 
-    min-height: 200px;
+    height: 80vh;
     min-width: 500px;
 
     border-radius: 20px;
