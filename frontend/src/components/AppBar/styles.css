@@ -1,5 +1,6 @@
 .row {
     display: flex;
+    z-index: 5;
 }
 
 .logo {

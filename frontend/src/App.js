@@ -18,7 +18,8 @@ class App extends Component {
     const GlobalStyles = createGlobalStyle`
       body {
         @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
-        font-family: 'Karla', sans-serif;
+        @import url("https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext");
+        font-family: 'Karla', 'Pacifico', sans-serif;
       }
     `;
 
@@ -29,7 +30,7 @@ class App extends Component {
 
             <StyledContainer className="container">
               <AppBar />
-                <Route exact path="/" component={Landing} />
+                <Route exact path="/" component={ Landing } />
                 <Route exact path="/register" component={ Register } />
                 <Route exact path="/login" component={ Login } />
             </StyledContainer>

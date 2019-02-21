@@ -13,8 +13,8 @@ class AppBar extends Component {
                   <Button about>Contacts</Button>
                   <Button about>About</Button>
                   <div className="push">
-                      <Button signup border>Follow</Button>
-                      <Button register border>Twitter</Button>
+                      <Button signup border>Like</Button>
+                      <Button register border>Share</Button>
                     <Button signup border>
                       <FontAwesomeIcon icon={['fab', 'twitter']} className="social-media fa-lg" />
                     <span>
