@@ -16,6 +16,9 @@ class App extends Component {
     library.add(faFacebookSquare)
 
     const GlobalStyles = createGlobalStyle`
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
         @import url("https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext");
