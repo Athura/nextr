@@ -14,6 +14,7 @@ const colors = {
     warning: '#DC143C',
     success: '#7FFF00',
     information: '#F0E68C',
+    background: '#F8F8F8',
 
     // container colors http://www.0to255.com/454054
     // bottom is the dark purple above

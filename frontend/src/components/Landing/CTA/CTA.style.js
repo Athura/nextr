@@ -4,12 +4,13 @@ import theme from '../../../styles/theme';
 export const StyledCTAContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
 
     position: absolute;
-    background: ${theme.pink};
+    background: ${theme.background};
 
     left: 0;
     right: 0;
@@ -18,7 +19,7 @@ export const StyledCTAContainer = styled.div`
 
     margin: 5%;
 
-    height: 40vh;
+    height: 60vh;
     min-width: 300px;
 
     border-radius: 20px;
