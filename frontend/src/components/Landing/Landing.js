@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { StyledContainer, StyledH1, StyledH3, StyledSpan, StyledBody, StyledShift } from './Landing.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import CTA from './CTA/CTA';
+import Body from './Body/Body';
 
 class Landing extends Component {
     render() {
@@ -20,7 +22,7 @@ class Landing extends Component {
                     <CTA />
 
                     <StyledShift>
-                        <h1>Hi</h1>
+                        <Body/>
                     </StyledShift>
                 </StyledBody>
 

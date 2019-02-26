@@ -19,7 +19,7 @@ export const StyledCTAContainer = styled.div`
 
     margin: 5%;
 
-    height: 60vh;
+    height: 70vh;
     min-width: 300px;
 
     border-radius: 20px;

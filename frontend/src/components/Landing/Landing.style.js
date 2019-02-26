@@ -45,7 +45,5 @@ export const StyledSpan = styled.span`
 `;
 
 export const StyledShift = styled.div`
-    margin-top: 100px;
+    padding-top: 700px;
 `;
-
-export const 
