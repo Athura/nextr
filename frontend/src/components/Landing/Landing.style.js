@@ -11,7 +11,7 @@ export const StyledContainer = styled.div`
 
 export const StyledBody = styled.div`
     background: white;
-    height: 80vh;
+    height: 160vh;
     margin: auto;
     width: 100%;
     text-align: center;
@@ -43,3 +43,9 @@ export const StyledSpan = styled.span`
     color: ${theme.gray};
     opacity: 0.6;
 `;
+
+export const StyledShift = styled.div`
+    margin-top: 100px;
+`;
+
+export const 

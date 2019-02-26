@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyledContainer, StyledH1, StyledH3, StyledSpan, StyledBody } from './Landing.style';
+import { StyledContainer, StyledH1, StyledH3, StyledSpan, StyledBody, StyledShift } from './Landing.style';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CTA from './CTA/CTA';
 
@@ -13,12 +13,17 @@ class Landing extends Component {
                     <br/>
                     <StyledSpan>We unite the best gifters with those of us who need a hint sometimes.</StyledSpan>
                     <ul>
-                    <FontAwesomeIcon icon={['fab', 'facebook']} className="social-media fa-lg" />
+                        <FontAwesomeIcon icon={['fab', 'facebook']} className="social-media fa-lg" />
                     </ul>
                 </StyledContainer>
                 <StyledBody>
                     <CTA />
+
+                    <StyledShift>
+                        <h1>Hi</h1>
+                    </StyledShift>
                 </StyledBody>
+
             </>
         )
     }
