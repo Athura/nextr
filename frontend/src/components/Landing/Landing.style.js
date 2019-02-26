@@ -3,7 +3,7 @@ import theme from '../../styles/theme';
 
 export const StyledContainer = styled.div`
     margin: auto;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-top: 10%;
     z-index:6;
@@ -45,5 +45,5 @@ export const StyledSpan = styled.span`
 `;
 
 export const StyledShift = styled.div`
-    padding-top: 700px;
+    padding-top: 875px;
 `;
