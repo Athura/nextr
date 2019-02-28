@@ -12,6 +12,8 @@ export const StyledHelpContainer = styled.div`
     margin-top: 20%;
     z-index:6;
 
+    flex-direction: row;
+
     background-color: tomato;
 
     height: 600px;

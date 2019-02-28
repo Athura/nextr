@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyledBodyContainer, StyledDiv, StyledImg, StyledHelpContainer } from './Body.style';
-import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade';
+
+import Walkthrough from './Walkthrough/Walkthrough';
 
 
 
@@ -22,7 +24,7 @@ const Body = () => {
             </StyledBodyContainer>
 
             <StyledHelpContainer>
-                <h1>Help!</h1>
+                <Walkthrough />
             </StyledHelpContainer>
         </>
     )
