@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledBodyContainer, StyledDiv, StyledImg, StyledHelpContainer } from './Body.style';
+import { StyledBodyContainer, StyledDiv, StyledImg, StyledHelpContainer, StyledHeader, StyledDesc } from './Body.style';
 import Fade from 'react-reveal/Fade';
 
 import Walkthrough from './Walkthrough/Walkthrough';
@@ -13,8 +13,8 @@ const Body = () => {
                 <Fade left duration={2000}>
                     <StyledDiv leftHalf>
                         <article>
-                            <h1>Your love life is our priority</h1>
-                            <p>We're committed to helping lovers and partners give what presents they want and deliver with confidence</p>
+                            <StyledHeader>Your love life is our priority</StyledHeader>
+                            <StyledDesc>We're committed to helping lovers and partners <br /> give what presents they want and deliver with confidence</StyledDesc>
                         </article>
                     </StyledDiv>
                 </Fade>

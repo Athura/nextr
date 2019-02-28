@@ -6,6 +6,7 @@ import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 import { StyledApp, StyledContainer } from './styles/App.styles';
 import AppBar from './components/AppBar/AppBar';
+import Footer from './components/Footer/Footer';
 import Landing from './components/Landing/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -36,6 +37,7 @@ class App extends Component {
                 <Route exact path="/" component={ Landing } />
                 <Route exact path="/register" component={ Register } />
                 <Route exact path="/login" component={ Login } />
+                <Footer />
             </StyledContainer>
         </StyledApp>
       </Router>

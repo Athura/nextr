@@ -1,8 +1,17 @@
 import styled, { css } from 'styled-components';
+import theme from '../../../styles/theme';
 import  present  from '../../../styles/img/annie-spratt-210644-unsplash.jpg';
 
 export const StyledBodyContainer = styled.div`
     display: flex;
+`;
+
+export const StyledHeader = styled.h1`
+    font-size: 30px;
+`;
+
+export const StyledDesc = styled.p`
+    font-size: 25px;
 `;
 
 export const StyledHelpContainer = styled.div`
@@ -14,7 +23,7 @@ export const StyledHelpContainer = styled.div`
 
     flex-direction: row;
 
-    background-color: tomato;
+    background-color: ${theme.background};
 
     height: 600px;
 
