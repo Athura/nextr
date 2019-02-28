@@ -14,6 +14,21 @@ export const StyledDesc = styled.p`
     font-size: 25px;
 `;
 
+export const StyledGetStartedContainer = styled.div`
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    z-index:6;
+    margin-top: -60px;
+    flex-direction: row;
+
+    background-color: ${theme.gray};
+
+    height: 400px;
+
+    border-radius: 20px;
+`;
+
 export const StyledHelpContainer = styled.div`
     margin: auto;
     width: 100%;

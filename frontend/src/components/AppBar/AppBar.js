@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from '../../styles/common/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 class AppBar extends Component {
   render() {
@@ -15,12 +16,14 @@ class AppBar extends Component {
                   <div className="push">
                       <Button signup border>Like</Button>
                       <Button register border>Share</Button>
+                    <Link to='/login'>
                     <Button signup border>
                       <FontAwesomeIcon icon={['fab', 'twitter']} className="social-media fa-lg" />
-                    <span>
+                      <span>
                         Login
                       </span></Button>
-                    <Button register border>Register</Button>
+                    </Link>
+                    <Link to='/register'><Button register border>Register</Button></Link>
                   </div>
                 </ul>
             </div>

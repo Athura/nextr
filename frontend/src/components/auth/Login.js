@@ -11,8 +11,6 @@ class Login extends Component {
           password: ''
         }
       }
-      this.handleFormSubmit = this.handleFormSubmit.bind(this);
-      this.handleClearForm = this.handleClearForm.bind(this);
       this.handleInput = this.handleInput.bind(this);
     }
 
@@ -38,14 +36,14 @@ class Login extends Component {
           <Input type={'text'}
             title={'Email'}
             name={'email'}
-            value={this.state.newUser.email}
+            value={this.state.existingUser.email}
             placeholder={'Enter your email here'}
             handleChange={this.handleInput}
           />
           <Input type={'text'}
             title={'Password'}
             name={'password'}
-            value={this.state.newUser.password}
+            value={this.state.existingUser.password}
             placeholder={'Your Password'}
             handleChange={this.handleInput}
           />

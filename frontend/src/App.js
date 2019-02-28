@@ -35,8 +35,8 @@ class App extends Component {
             <StyledContainer className="container">
               <AppBar />
                 <Route exact path="/" component={ Landing } />
-                <Route exact path="/register" component={ Register } />
-                <Route exact path="/login" component={ Login } />
+                <Route path="/register" component={ Register } />
+                <Route path="/login" component={ Login } />
                 <Footer />
             </StyledContainer>
         </StyledApp>
