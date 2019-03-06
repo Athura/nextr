@@ -10,6 +10,8 @@ import Footer from './components/Footer/Footer';
 import Landing from './components/Landing/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 class App extends Component {
   render() {
@@ -29,15 +31,17 @@ class App extends Component {
 
     return (
       <Router>
-        <StyledApp className="App">
+        <StyledApp>
         <GlobalStyles />
 
-            <StyledContainer className="container">
+            <StyledContainer>
               <AppBar />
                 <Route exact path="/" component={ Landing } />
                 <Route path="/register" component={ Register } />
                 <Route path="/login" component={ Login } />
-                <Footer />
+                <Route path="/contact" component={ Contact } />
+                <Route path="/about" component={ About } />
+              <Footer />
             </StyledContainer>
         </StyledApp>
       </Router>
