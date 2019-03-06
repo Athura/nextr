@@ -30,21 +30,21 @@ class App extends Component {
     `;
 
     return (
-      <Router>
-        <StyledApp>
-        <GlobalStyles />
+        <Router>
+          <StyledApp>
+          <GlobalStyles />
 
-            <StyledContainer>
-              <AppBar />
-                <Route exact path="/" component={ Landing } />
-                <Route path="/register" component={ Register } />
-                <Route path="/login" component={ Login } />
-                <Route path="/contact" component={ Contact } />
-                <Route path="/about" component={ About } />
-              <Footer />
-            </StyledContainer>
-        </StyledApp>
-      </Router>
+              <StyledContainer>
+                <AppBar />
+                  <Route exact path="/" component={ Landing } />
+                  <Route path="/register" component={ Register } />
+                  <Route path="/login" component={ Login } />
+                  <Route path="/contact" component={ Contact } />
+                  <Route path="/about" component={ About } />
+                <Footer />
+              </StyledContainer>
+          </StyledApp>
+        </Router>
     );
   }
 }
