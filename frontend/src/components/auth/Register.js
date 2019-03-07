@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
+import styled from 'styled-components';
+
+
 
 class Register extends Component {
   constructor() {
@@ -17,11 +20,32 @@ class Register extends Component {
     }
   }
 
+  handleInput = (e) => {
+    let value = e.target.value;
+    let name = e.target.name;
+    this.setState(prevState => {
+      return {
+        newUser: {
+          ...prevState.newUser, [name]: value
+        }
+      }
+    }
+    )
+}
+
+  handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const newUser = this.state.newUser;
+
+    console.log(newUser);
+  }
+
   render() {
     return (
       <div>
         <h1>Register</h1>
-        <form className="container" onSubmit={this.handleFormSubmit}>
+        <div className="container" onSubmit={this.handleFormSubmit}>
           <Input type={'text'}
             title={'Firstname'}
             name={'firstname'}
@@ -51,15 +75,15 @@ class Register extends Component {
             handleChange={this.handleInput}
           />
           <Input type={'text'}
-            title={'Password'}
-            name={'password'}
-            value={this.state.newUser.password}
-            placeholder={'Your Password'}
+            title={'Password Confirmation'}
+            name={'password2'}
+            value={this.state.newUser.password2}
+            placeholder={'Confirm Your Password'}
             handleChange={this.handleInput}
           />
-          <Button>Submit</Button>
-          <Button>Forgot your login?</Button>
-        </form>
+          <Button register border>Submit</Button>
+          <Button register border>Forgot your login?</Button>
+        </div>
       </div>
     )
   }

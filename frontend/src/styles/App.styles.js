@@ -31,7 +31,7 @@ export const StyledContainer = styled.div`
 
     margin: 5%;
 
-    height: 80vh;
+    height: 90vh;
     min-width: 500px;
 
     border-radius: 20px;

@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 
 const Label = styled.label`
-    font-size: 20px;
+    font-size: 15px;
     padding-right: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -14,7 +14,7 @@ const Label = styled.label`
 
 const FormContainer = styled.div`
     padding: 20px 20px;
-    width: 60%;
+    width: 90%;
 
     display: flex;
     flex-direction: column;
@@ -25,15 +25,13 @@ const FormContainer = styled.div`
 
 const StyledInput = styled.input.attrs({ type: 'text' })`
     width: 100%;
-    background-color: ${theme.information};
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: ${theme.background};
+    color: black;
+    padding: 10px 15px;
+    margin: 2px 0;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-
-    align-self: flex-end;
+    cursor: text;
 `;
 
 const Input = (props) => (
