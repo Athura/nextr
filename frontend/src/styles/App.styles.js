@@ -1,18 +1,7 @@
 import styled from 'styled-components';
-import theme from './theme';
 import background from './img/kira-auf-der-heide-475677-unsplash.jpg'
 
-export const StyledApp = styled.div`
-    text-align: center;
-    height: 340vh;
-    width: 100%;
-    background-image: linear-gradient(to top right,
-        purple 30%,
-        ${theme.darkpurple},
-        ${theme.pink},
-        ${theme.salmon},
-        ${theme.orange});
-`;
+
 
 export const StyledContainer = styled.div`
     background-image : linear-gradient(

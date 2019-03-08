@@ -4,7 +4,9 @@ import { createGlobalStyle } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
-import { StyledApp, StyledContainer } from './styles/App.styles';
+import theme from './styles/theme';
+
+import { StyledContainer } from './styles/App.styles';
 import AppBar from './components/AppBar/AppBar';
 import Footer from './components/Footer/Footer';
 import Landing from './components/Landing/Landing';
@@ -21,6 +23,14 @@ class App extends Component {
     const GlobalStyles = createGlobalStyle`
       html {
         scroll-behavior: smooth;
+        background-size: cover;
+        background-position: center center;
+        background-image: linear-gradient(to top right,
+        purple 30%,
+        ${theme.darkpurple},
+        ${theme.pink},
+        ${theme.salmon},
+        ${theme.orange});
       }
       body {
         @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
@@ -31,7 +41,7 @@ class App extends Component {
 
     return (
         <Router>
-          <StyledApp>
+          <>
           <GlobalStyles />
 
               <StyledContainer>
@@ -43,7 +53,7 @@ class App extends Component {
                   <Route path="/about" component={ About } />
                 <Footer />
               </StyledContainer>
-          </StyledApp>
+          </>
         </Router>
     );
   }

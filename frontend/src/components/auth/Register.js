@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
-import styled from 'styled-components';
+import axios from 'axios';
+import classnames from 'classnames';
 
 
 
@@ -20,7 +21,7 @@ class Register extends Component {
     }
   }
 
-  handleInput = (e) => {
+handleInput = (e) => {
     let value = e.target.value;
     let name = e.target.name;
     this.setState(prevState => {
@@ -30,7 +31,7 @@ class Register extends Component {
         }
       }
     }
-    )
+  )
 }
 
   handleFormSubmit = (e) => {
@@ -38,15 +39,24 @@ class Register extends Component {
 
     const newUser = this.state.newUser;
 
-    console.log(newUser);
+    axios.post('/api/users/register', newUser)
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({ errors: err.response.data }))
   }
 
   render() {
+
+    const { errors } = this.state;
+
     return (
       <div>
         <h1>Register</h1>
         <div className="container" onSubmit={this.handleFormSubmit}>
-          <Input type={'text'}
+          <Input
+            className={classnames({
+              'is-invalid': errors.name
+            })}
+            type={'text'}
             title={'Firstname'}
             name={'firstname'}
             value={this.state.newUser.firstname}
@@ -67,21 +77,21 @@ class Register extends Component {
             placeholder={'Enter your email here'}
             handleChange={this.handleInput}
           />
-          <Input type={'text'}
+          <Input type={'password'}
             title={'Password'}
             name={'password'}
             value={this.state.newUser.password}
             placeholder={'Your Password'}
             handleChange={this.handleInput}
           />
-          <Input type={'text'}
+          <Input type={'password'}
             title={'Password Confirmation'}
             name={'password2'}
             value={this.state.newUser.password2}
             placeholder={'Confirm Your Password'}
             handleChange={this.handleInput}
           />
-          <Button register border>Submit</Button>
+          <Button register border onClick={this.handleFormSubmit}>Submit</Button>
           <Button register border>Forgot your login?</Button>
         </div>
       </div>

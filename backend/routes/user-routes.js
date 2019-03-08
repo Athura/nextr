@@ -23,7 +23,7 @@ router.get('/test', (req, res) => {
     })
 });
 
-// @route GET api/users/register
+// @route POST api/users/register
 // @desc Register a user account
 // @access public
 router.post('/register', (req, res) => {
@@ -43,7 +43,7 @@ router.post('/register', (req, res) => {
             return res.status(400).json(errors);
         } else {
             const avatar = gravatar.url(req.body.email, {
-                s: '200', // Size 
+                s: '200', // Size
                 r: 'pg', // Rating
                 d: 'retro' // image for if user doesnt have account
             });
