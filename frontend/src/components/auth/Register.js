@@ -53,9 +53,6 @@ handleInput = (e) => {
         <h1>Register</h1>
         <div className="container" onSubmit={this.handleFormSubmit}>
           <Input
-            className={classnames({
-              'is-invalid': errors.name
-            })}
             type={'text'}
             title={'Firstname'}
             name={'firstname'}

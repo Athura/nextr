@@ -1,15 +1,17 @@
 import React from 'react';
 import { StyledFooter, StyledFootButton, StyledFootContainer, StyledFootCont, StyledFootCenter } from './Footer.style';
 
+import FooterCards from  './FooterCards/FooterCards';
+
 const Footer = () => {
     return (
         <>
             <StyledFooter>
-                <StyledFootButton></StyledFootButton>
+                <StyledFootButton />
                 <StyledFootContainer>
                     <StyledFootCont>
                         <StyledFootCenter>
-                            <h3>Classy Footer Text</h3>
+                            <FooterCards />
                         </StyledFootCenter>
                     </StyledFootCont>
                 </StyledFootContainer>
