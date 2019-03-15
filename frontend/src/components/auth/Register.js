@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
-import classnames from 'classnames';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions'
 
@@ -46,7 +46,7 @@ handleInput = (e) => {
 
     const newUser = this.state.newUser;
 
-    this.props.registerUser(newUser);
+    this.props.registerUser(newUser, this.props.history);
   }
 
   render() {
@@ -57,7 +57,6 @@ handleInput = (e) => {
       <div>
         <h1>Register</h1>
         <div className="container" onSubmit={this.handleFormSubmit}>
-          <div>
               <Input
                 type={'text'}
                 title={'Firstname'}
@@ -69,7 +68,6 @@ handleInput = (e) => {
               {errors.firstname && (
                 <div>{errors.firstname}</div>
               )}
-          </div>
           <Input type={'text'}
             title={'lastname'}
             name={'lastname'}
@@ -129,4 +127,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { registerUser })(Register);
+export default connect(mapStateToProps, { registerUser })(withRouter(Register));
