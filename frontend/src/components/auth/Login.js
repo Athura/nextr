@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Input from '../Form/Input';
+import { Button } from '../../styles/common/button';
+
+import axios from 'axios';
 
 class Login extends Component {
   constructor(props) {
@@ -8,13 +11,13 @@ class Login extends Component {
     this.state = {
         existingUser: {
           email: '',
-          password: ''
+          password: '',
+          errors: {}
         }
       }
-      this.handleInput = this.handleInput.bind(this);
     }
 
-    handleInput(e) {
+    handleInput = (e) => {
       let value = e.target.value;
       let name = e.target.name;
       this.setState(prevState => {
@@ -23,8 +26,12 @@ class Login extends Component {
             ...prevState.newUser, [name]: value
           }
         }
-      }, () => console.log(this.state.newUser)
+      }
       )
+  }
+
+  onSubmit = (e) => {
+    const existingUser = this.state.existingUser;
   }
 
 
@@ -47,8 +54,8 @@ class Login extends Component {
             placeholder={'Your Password'}
             handleChange={this.handleInput}
           />
-          <button>Submit</button>
-          <button>Forgot your login?</button>
+          <Button register border>Submit</Button>
+          <Button register border>Forgot your login?</Button>
         </form>
       </div>
     )

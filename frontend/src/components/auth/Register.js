@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
 import axios from 'axios';
 import classnames from 'classnames';
-
+import { connect } from 'react-redux';
+import { registerUser } from '../../actions/authActions'
 
 
 class Register extends Component {
@@ -39,17 +41,21 @@ handleInput = (e) => {
 
     const newUser = this.state.newUser;
 
-    axios.post('/api/users/register', newUser)
-      .then(res => console.log(res.data))
-      .catch(err => this.setState({ errors: err.response.data }))
+    this.props.registerUser(newUser);
+
+    // axios.post('/api/users/register', newUser)
+    //   .then(res => console.log(res.data))
+    //   .catch(err => this.setState({ errors: err.response.data }))
   }
 
   render() {
 
     const { errors } = this.state;
+    const { user } = this.props.auth;
 
     return (
       <div>
+        {user ? user.name : null}
         <h1>Register</h1>
         <div className="container" onSubmit={this.handleFormSubmit}>
           <Input
@@ -96,5 +102,13 @@ handleInput = (e) => {
   }
 }
 
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+}
 
-export default Register;
+const mapStateToProps = (state) => ({
+  auth: state.auth
+});
+
+export default connect(mapStateToProps, { registerUser })(Register);

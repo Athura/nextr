@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
+import { Provider } from 'react-redux';
 
 import theme from './styles/theme';
+import store from './store/store';
 
 import { StyledContainer } from './styles/App.styles';
 import AppBar from './components/AppBar/AppBar';
@@ -17,8 +19,7 @@ import Contact from './components/Contact/Contact';
 
 class App extends Component {
   render() {
-
-    library.add(faFacebookSquare)
+    library.add(faFacebookSquare);
 
     const GlobalStyles = createGlobalStyle`
       html {
@@ -40,21 +41,22 @@ class App extends Component {
     `;
 
     return (
+      <Provider store={store}>
         <Router>
           <>
-          <GlobalStyles />
-
-              <StyledContainer>
-                <AppBar />
-                  <Route exact path="/" component={ Landing } />
-                  <Route path="/register" component={ Register } />
-                  <Route path="/login" component={ Login } />
-                  <Route path="/contact" component={ Contact } />
-                  <Route path="/about" component={ About } />
-                <Footer />
-              </StyledContainer>
+            <GlobalStyles />
+            <StyledContainer>
+              <AppBar />
+              <Route exact path="/" component={Landing} />
+              <Route path="/register" component={Register} />
+              <Route path="/login" component={Login} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/about" component={About} />
+              <Footer />
+            </StyledContainer>
           </>
         </Router>
+      </Provider>
     );
   }
 }
