@@ -44,7 +44,7 @@ handleInput = (e) => {
   handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const newUser = this.state.newUser;
+    const newUser = this.state;
 
     this.props.registerUser(newUser, this.props.history);
   }

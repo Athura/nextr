@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './utils/setAuthToken';
+import { setCurrentUser } from './actions/authActions';
 import { createGlobalStyle } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
@@ -17,6 +20,16 @@ import Login from './components/auth/Login';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 
+// Check for token
+if (localStorage.jwtToken) {
+  // Set auth token header auth
+  setAuthToken(localStorage.jwtToken);
+  // Decode token and get user information and expiration
+  const decoded = jwt_decode(localStorage.jwtToken);
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded));
+}
+
 class App extends Component {
   render() {
     library.add(faFacebookSquare);
@@ -24,7 +37,7 @@ class App extends Component {
     const GlobalStyles = createGlobalStyle`
       html {
         scroll-behavior: smooth;
-        background-size: cover;
+        background-size: auto;
         background-position: center center;
         background-image: linear-gradient(to top right,
         purple 30%,
