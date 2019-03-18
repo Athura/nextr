@@ -1,4 +1,4 @@
-import { keyframes } from "../../node_modules/styled-components";
+import { keyframes } from '../../node_modules/styled-components';
 
 export const moveInLeft = keyframes`
     0% {
@@ -37,4 +37,4 @@ export const moveInBottom = keyframes`
         opacity: 1;
         transform: translate(0px);
     }
-`
+`;

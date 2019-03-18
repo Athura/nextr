@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Button } from "../../styles/common/button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./styles.css";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './styles.css';
+import { Link } from 'react-router-dom';
+import { Button } from '../../styles/common/button';
 
 class AppBar extends Component {
   render() {
@@ -10,14 +10,14 @@ class AppBar extends Component {
       <nav>
         <div className="row">
           <ul className="main-nav">
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <Button about>Home</Button>
             </Link>
 
-            <Link to="/contact" style={{ textDecoration: "none" }}>
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
               <Button about>Contact</Button>
             </Link>
-            <Link to="/about" style={{ textDecoration: "none" }}>
+            <Link to="/about" style={{ textDecoration: 'none' }}>
               <Button about>About</Button>
             </Link>
             <div className="push">
@@ -27,19 +27,16 @@ class AppBar extends Component {
               <Button register border>
                 Share
               </Button>
-              <Link
-                to="/login"
-                style={{ textDecoration: "none" }}
-              >
+              <Link to="/login" style={{ textDecoration: 'none' }}>
                 <Button signup border>
                   <FontAwesomeIcon
-                    icon={["fab", "twitter"]}
+                    icon={['fab', 'twitter']}
                     className="social-media fa-lg"
                   />
                   <span>Login</span>
                 </Button>
               </Link>
-              <Link to="/register" style={{ textDecoration: "none" }}>
+              <Link to="/register" style={{ textDecoration: 'none' }}>
                 <Button register border>
                   Register
                 </Button>

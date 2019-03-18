@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
-import { setCurrentUser } from './actions/authActions';
 import { createGlobalStyle } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { Provider } from 'react-redux';
+import { setCurrentUser } from './actions/authActions';
+import setAuthToken from './utils/setAuthToken';
 
 import theme from './styles/theme';
 import store from './store/store';

@@ -1,83 +1,87 @@
 import styled, { css } from 'styled-components';
 import theme from '../../../styles/theme';
-import  present  from '../../../styles/img/annie-spratt-210644-unsplash.jpg';
+import present from '../../../styles/img/annie-spratt-210644-unsplash.jpg';
 
 export const StyledBodyContainer = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 export const StyledHeader = styled.h1`
-    font-size: 30px;
+  font-size: 30px;
 `;
 
 export const StyledDesc = styled.p`
-    font-size: 25px;
+  font-size: 25px;
 `;
 
 export const StyledGetStartedContainer = styled.div`
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    z-index:6;
-    margin-top: -60px;
-    flex-direction: row;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  z-index: 6;
+  margin-top: -60px;
+  flex-direction: row;
 
-    background-color: ${theme.gray};
+  background-color: ${theme.gray};
 
-    height: 400px;
+  height: 400px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 `;
 
 export const StyledHelpContainer = styled.div`
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    margin-top: 20%;
-    z-index:6;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+  z-index: 6;
 
-    flex-direction: row;
+  flex-direction: row;
 
-    background-color: ${theme.background};
+  background-color: ${theme.background};
 
-    height: 600px;
+  height: 600px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 `;
 
 export const StyledImg = styled.img`
-    background-image: url(${present});
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
+  background-image: url(${present});
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
 
-    width: 800px;
-    height: 513px;
-    z-index: 20;
+  width: 800px;
+  height: 513px;
+  z-index: 20;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 
-    border-radius: 20px;
+  border-radius: 20px;
 `;
 
 export const StyledDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    ${props => props.leftHalf && css`
-        flex: 1;
-        padding: 1rem;
+  ${props =>
+    props.leftHalf &&
+    css`
+      flex: 1;
+      padding: 1rem;
     `}
 
-    ${props => props.rightHalf && css`
-        flex: 1;
-        padding: 1rem;
+  ${props =>
+    props.rightHalf &&
+    css`
+      flex: 1;
+      padding: 1rem;
     `}
 `;

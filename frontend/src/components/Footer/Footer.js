@@ -1,23 +1,27 @@
 import React from 'react';
-import { StyledFooter, StyledFootButton, StyledFootContainer, StyledFootCont, StyledFootCenter } from './Footer.style';
+import {
+  StyledFooter,
+  StyledFootButton,
+  StyledFootContainer,
+  StyledFootCont,
+  StyledFootCenter,
+} from './Footer.style';
 
-import FooterCards from  './FooterCards/FooterCards';
+import FooterCards from './FooterCards/FooterCards';
 
-const Footer = () => {
-    return (
-        <>
-            <StyledFooter>
-                <StyledFootButton />
-                <StyledFootContainer>
-                    <StyledFootCont>
-                        <StyledFootCenter>
-                            <FooterCards />
-                        </StyledFootCenter>
-                    </StyledFootCont>
-                </StyledFootContainer>
-            </StyledFooter>
-        </>
-    )
-}
+const Footer = () => (
+  <>
+    <StyledFooter>
+      <StyledFootButton />
+      <StyledFootContainer>
+        <StyledFootCont>
+          <StyledFootCenter>
+            <FooterCards />
+          </StyledFootCenter>
+        </StyledFootCont>
+      </StyledFootContainer>
+    </StyledFooter>
+  </>
+);
 
 export default Footer;
