@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from '../../styles/common/button';
+import { StyledError } from '../../styles/common/error';
 import Input from '../Form/Input';
 import { loginUser } from '../../actions/authActions';
 
@@ -34,10 +33,8 @@ class Login extends Component {
     const { value } = e.target;
     const { name } = e.target;
     this.setState(prevState => ({
-      newUser: {
-        ...prevState.newUser,
-        [name]: value,
-      },
+      ...prevState.newUser,
+      [name]: value,
     }));
   };
 
@@ -53,7 +50,7 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div>
+      <>
         <form className="container" onSubmit={this.handleFormSubmit}>
           <Input
             type="text"
@@ -63,16 +60,16 @@ class Login extends Component {
             placeholder="Enter your email here"
             handleChange={this.handleInput}
           />
-          {errors.email && <div>{errors.email}</div>}
+          {errors.email && <StyledError>{errors.email}</StyledError>}
           <Input
-            type="text"
+            type="password"
             title="Password"
             name="password"
             value={this.state.password}
             placeholder="Your Password"
             handleChange={this.handleInput}
           />
-          {errors.password && <div>{errors.password}</div>}
+          {errors.password && <StyledError>{errors.password}</StyledError>}
           <Button register border onClick={this.onSubmit}>
             Submit
           </Button>
@@ -80,7 +77,7 @@ class Login extends Component {
             Forgot your login?
           </Button>
         </form>
-      </div>
+      </>
     );
   }
 }

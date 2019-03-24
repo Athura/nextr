@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
-import { connect } from 'react-redux';
+import { StyledError } from '../../styles/common/error';
 import { registerUser } from '../../actions/authActions';
 
 class Register extends Component {
@@ -28,13 +30,12 @@ class Register extends Component {
   };
 
   handleInput = e => {
-    const {value} = e.target;
-    const {name} = e.target;
+    const { value } = e.target;
+    const { name } = e.target;
     this.setState(prevState => ({
-        newUser: {
-          ...prevState.newUser, [name]: value
-        }
-      })
+      ...prevState.newUser,
+      [name]: value,
+    }));
   };
 
   handleFormSubmit = e => {
@@ -42,6 +43,7 @@ class Register extends Component {
 
     const newUser = this.state;
 
+    // eslint-disable-next-line react/prop-types
     this.props.registerUser(newUser, this.props.history);
   };
 
@@ -60,7 +62,7 @@ class Register extends Component {
             placeholder="Enter your first name here"
             handleChange={this.handleInput}
           />
-          {errors.firstname && <div>{errors.firstname}</div>}
+          {errors.firstname && <StyledError>{errors.firstname}</StyledError>}
           <Input
             type="text"
             title="lastname"
@@ -69,7 +71,7 @@ class Register extends Component {
             placeholder="Enter your last name here"
             handleChange={this.handleInput}
           />
-          {errors.firstname && <div>{errors.firstname}</div>}
+          {errors.lastname && <StyledError>{errors.lastname}</StyledError>}
           <Input
             type="text"
             title="email"
@@ -78,7 +80,7 @@ class Register extends Component {
             placeholder="Enter your email here"
             handleChange={this.handleInput}
           />
-          {errors.firstname && <div>{errors.firstname}</div>}
+          {errors.email && <StyledError>{errors.email}</StyledError>}
           <Input
             type="password"
             title="Password"
@@ -87,7 +89,7 @@ class Register extends Component {
             placeholder="Your Password"
             handleChange={this.handleInput}
           />
-          {errors.firstname && <div>{errors.firstname}</div>}
+          {errors.password && <StyledError>{errors.password}</StyledError>}
           <Input
             type="password"
             title="Password Confirmation"
@@ -96,13 +98,15 @@ class Register extends Component {
             placeholder="Confirm Your Password"
             handleChange={this.handleInput}
           />
-          {errors.firstname && <div>{errors.firstname}</div>}
-          <Button register border onClick={this.handleFormSubmit}>
-            Submit
-          </Button>
-          <Button register border>
-            Forgot your login?
-          </Button>
+          {errors.password2 && <StyledError>{errors.password2}</StyledError>}
+          <div>
+            <Button register border onClick={this.handleFormSubmit}>
+              Submit
+            </Button>
+            <Button register border>
+              Forgot your login?
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -111,6 +115,7 @@ class Register extends Component {
 
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/no-unused-prop-types
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
 };

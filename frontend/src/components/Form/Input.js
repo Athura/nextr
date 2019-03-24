@@ -14,7 +14,7 @@ const Label = styled.label`
 
 const FormContainer = styled.div`
   padding: 20px 20px;
-  width: 90%;
+  width: 70%;
 
   display: flex;
   flex-direction: column;
