@@ -19,7 +19,7 @@ class AppBar extends Component {
 
     const authLinks = (
       <a style={{ textDecoration: 'none' }}>
-        <Button signup border onClick={this.onLogoutClick.bind(this)}>
+        <Button signup border onClick={this.onLogoutClick}>
           <span>Logout</span>
         </Button>
         <img
