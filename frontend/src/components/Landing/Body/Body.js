@@ -9,6 +9,7 @@ import {
   StyledDesc,
   StyledGetStartedContainer,
 } from './Body.style';
+import coffee_lover from '../../../styles/img/coffee_lover.svg';
 
 import Walkthrough from './Walkthrough/Walkthrough';
 
@@ -27,7 +28,7 @@ const Body = () => (
         </StyledDiv>
       </Fade>
       <StyledDiv rightHalf>
-        <StyledImg />
+        <img src={coffee_lover} alt="coffee" />
       </StyledDiv>
     </StyledBodyContainer>
 
