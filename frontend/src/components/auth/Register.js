@@ -3,10 +3,22 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import styled from 'styled-components';
 import Input from '../Form/Input';
 import { Button } from '../../styles/common/button';
 import { StyledError } from '../../styles/common/error';
 import { registerUser } from '../../actions/authActions';
+
+const StyledHeader = styled.h1`
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+`;
+
+const ButtonContainer = styled.div`
+  padding: 20px 20px;
+`;
 
 class Register extends Component {
   constructor() {
@@ -52,7 +64,7 @@ class Register extends Component {
 
     return (
       <div>
-        <h1>Register</h1>
+        <StyledHeader>Register</StyledHeader>
         <div className="container" onSubmit={this.handleFormSubmit}>
           <Input
             type="text"
@@ -99,14 +111,14 @@ class Register extends Component {
             handleChange={this.handleInput}
           />
           {errors.password2 && <StyledError>{errors.password2}</StyledError>}
-          <div>
+          <ButtonContainer>
             <Button register border onClick={this.handleFormSubmit}>
               Submit
             </Button>
             <Button register border>
               Forgot your login?
             </Button>
-          </div>
+          </ButtonContainer>
         </div>
       </div>
     );

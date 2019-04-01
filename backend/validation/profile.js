@@ -16,12 +16,16 @@ module.exports = function validateProfileInput(data) {
         errors.handle = 'Profile handle is required.';
     }
 
+    if (Validator.isEmpty(data.budget)) {
+        errors.budget = 'You must provide a budget. We use this to find a suitable gift.';
+    }
+
     if (Validator.isEmpty(data.status)) {
-        errors.status = 'Status field is required.';
+        errors.status = 'Status field is required. We use this to find a suitable gift.';
     }
 
     if (Validator.isEmpty(data.preferences)) {
-        errors.preferences = 'Preferences are required.';
+        errors.preferences = 'Preferences are required. This helps narrow the search down to be focused.';
     }
 
     return {

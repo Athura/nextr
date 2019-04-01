@@ -14,20 +14,7 @@ export const setCurrentUser = decoded => ({
 export const registerUser = (userData, history) => dispatch => {
   axios
     .post('/api/users/register', userData)
-    .then(res => {
-      // Save to localstorage
-      const { token } = res.data;
-      // Set token to ls
-      localStorage.setItem('jwtToken', token);
-      // Set token to Auth Header
-      setAuthToken(token);
-      // Decode the auth token to get user data
-      const decoded = jwt_decode(token);
-      // Set current user
-      dispatch(setCurrentUser(decoded));
-      // Send the user to the dashboard :)
-      history.push('/about');
-    })
+    .then(res => history.push('/login'))
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
