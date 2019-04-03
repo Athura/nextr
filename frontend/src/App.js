@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from 'react-redux';
-import { setCurrentUser } from './actions/authActions';
+import { setCurrentUser, logoutUser } from './actions/authActions';
+import { clearCurrentProfile } from './actions/profileActions';
 import setAuthToken from './utils/setAuthToken';
 
 import theme from './styles/theme';
@@ -17,6 +18,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Dashboard from './components/Dashboard/Dashboard';
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -26,15 +28,24 @@ if (localStorage.jwtToken) {
   const decoded = jwt_decode(localStorage.jwtToken);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
+
+  // Check for expired token
+  const currentTime = Date.now() / 1000;
+  if (decoded.exp < currentTime) {
+    // Logout the user
+    store.dispatch(logoutUser());
+    // Clear the current profile
+    store.dispatch(clearCurrentProfile());
+    window.location.href = '/login';
+  }
 }
 
 class App extends Component {
   render() {
-
     const GlobalStyles = createGlobalStyle`
       html {
         scroll-behavior: smooth;
-        background-size: auto;
+        background-size: 100%;
         background-position: center center;
         background-image: linear-gradient(to top right,
         purple 30%,
@@ -62,6 +73,7 @@ class App extends Component {
               <Route path="/login" component={Login} />
               <Route path="/contact" component={Contact} />
               <Route path="/about" component={About} />
+              <Route path="/dashboard" component={Dashboard} />
               <Footer />
             </StyledContainer>
           </>
