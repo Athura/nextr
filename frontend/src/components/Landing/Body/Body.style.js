@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import theme from '../../../styles/theme';
-import present from '../../../styles/img/annie-spratt-210644-unsplash.jpg';
 
 export const StyledBodyContainer = styled.div`
   display: flex;
@@ -33,7 +32,6 @@ export const StyledHelpContainer = styled.div`
   margin: auto;
   width: 100%;
   text-align: center;
-  margin-top: 20%;
   z-index: 6;
 
   flex-direction: row;
@@ -46,24 +44,11 @@ export const StyledHelpContainer = styled.div`
 `;
 
 export const StyledImg = styled.img`
-  background-image: url(${present});
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-
-  width: 800px;
-  height: 513px;
+  width: 600px;
+  height: 350px;
   z-index: 20;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  object-fit: cover;
   max-width: 100%;
   max-height: 100%;
-
-  border-radius: 20px;
 `;
 
 export const StyledDiv = styled.div`

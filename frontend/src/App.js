@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import { createGlobalStyle } from 'styled-components';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { Provider } from 'react-redux';
 import { setCurrentUser } from './actions/authActions';
 import setAuthToken from './utils/setAuthToken';
@@ -32,7 +30,6 @@ if (localStorage.jwtToken) {
 
 class App extends Component {
   render() {
-    library.add(faFacebookSquare);
 
     const GlobalStyles = createGlobalStyle`
       html {

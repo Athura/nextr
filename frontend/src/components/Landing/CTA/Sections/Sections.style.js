@@ -19,7 +19,7 @@ export const SectionCard = styled.div`
     `};
 `;
 
-export const StyledImg = styled.svg`
+export const StyledImg = styled.img`
   border-radius: 5px 5px 0 0;
   width: 100%;
 `;

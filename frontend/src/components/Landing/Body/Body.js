@@ -9,7 +9,7 @@ import {
   StyledDesc,
   StyledGetStartedContainer,
 } from './Body.style';
-import coffee_lover from '../../../styles/img/coffee_lover.svg';
+import CoffeeLover from '../../../styles/img/coffee_lover (1).svg';
 
 import Walkthrough from './Walkthrough/Walkthrough';
 
@@ -27,9 +27,11 @@ const Body = () => (
           </article>
         </StyledDiv>
       </Fade>
-      <StyledDiv rightHalf>
-        <img src={coffee_lover} alt="coffee" />
-      </StyledDiv>
+      <Fade right duration={5000}>
+        <StyledDiv rightHalf>
+          <StyledImg src={CoffeeLover} alt="coffee" />
+        </StyledDiv>
+      </Fade>
     </StyledBodyContainer>
 
     <StyledHelpContainer>

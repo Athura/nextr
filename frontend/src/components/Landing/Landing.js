@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   StyledContainer,
   StyledH1,
@@ -26,12 +25,6 @@ class Landing extends Component {
             We unite the best gifters with those of us who need a hint
             sometimes.
           </StyledSpan>
-          <ul>
-            <FontAwesomeIcon
-              icon={['fab', 'facebook']}
-              className="social-media fa-lg"
-            />
-          </ul>
         </StyledContainer>
         <StyledBody>
           <CTA />

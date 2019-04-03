@@ -18,27 +18,25 @@ class AppBar extends Component {
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
-      <a style={{ textDecoration: 'none' }}>
-        <Button signup border onClick={this.onLogoutClick}>
-          <span>Logout</span>
-        </Button>
-        <img
-          style = {{ width: '25px', marginRight: '5px' }}
-          src={user.avatar}
-          alt={user.name}
-          title="You must have a Gravatar email for an avatar to display here"
-        />
-      </a>
+      <>
+        <a style={{ textDecoration: 'none' }}>
+          <Button signup border onClick={this.onLogoutClick}>
+            <span>Logout</span>
+          </Button>
+          <img
+            style = {{ width: '25px', marginRight: '5px' }}
+            src={user.avatar}
+            alt={user.name}
+            title="You must have a Gravatar email for an avatar to display here"
+          />
+        </a>
+      </>
     );
 
     const guestLinks = (
       <>
         <Link to="/login" style={{ textDecoration: 'none' }}>
           <Button signup border>
-            <FontAwesomeIcon
-              icon={['fab', 'twitter']}
-              className="social-media fa-lg"
-            />
             <span>Login</span>
           </Button>
         </Link>
