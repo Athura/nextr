@@ -6,6 +6,7 @@ class NoProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      page: 1,
       budget: '',
       status: '',
       preferences: '',
@@ -16,7 +17,23 @@ class NoProfile extends Component {
     };
   }
 
+  nextPage = () => {
+      if (page > 4) {
+          display = 
+      }
+      this.setState({
+          page: this.state.page + 1
+      })
+  }
+
+  previousPage = () => {
+      this.setState({
+          page: this.state.page - 1
+      })
+  }
+
   render() {
+    const display;
     return <div />;
   }
 }
