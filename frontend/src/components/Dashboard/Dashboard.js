@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profileActions';
 
+import Spinner from '../Spinner/Spinner';
+
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
@@ -15,9 +17,16 @@ class Dashboard extends Component {
     let dashboardContent;
 
     if (profile === null || loading) {
-      dashboardContent = <h4> Loading... </h4>;
+      dashboardContent = <Spinner />;
     } else {
-      dashboardContent = <h1> Hello profile </h1>;
+      // Check if logged in user has profile data
+      if (Object.keys(profile).length > 0) {
+        // This means they have a profile
+        dashboardContent = <h4> DISPLAY PROFILE HERE </h4>;
+      } else {
+        // TODO: Component no profile goes here so they enter the multistep form to create a profile
+        dashboardContent = <h4> DISPLAY NO PROFILE HERE </h4>;
+      }
     }
 
     return <> {dashboardContent} </>;

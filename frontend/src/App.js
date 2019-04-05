@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import { createGlobalStyle } from 'styled-components';
 import { Provider } from 'react-redux';
@@ -9,6 +9,7 @@ import setAuthToken from './utils/setAuthToken';
 
 import theme from './styles/theme';
 import store from './store/store';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 import { StyledContainer } from './styles/App.styles';
 import AppBar from './components/AppBar/AppBar';
@@ -73,7 +74,9 @@ class App extends Component {
               <Route path="/login" component={Login} />
               <Route path="/contact" component={Contact} />
               <Route path="/about" component={About} />
-              <Route path="/dashboard" component={Dashboard} />
+              <Switch>
+                <ProtectedRoute path="/dashboard" component={Dashboard} />
+              </Switch>
               <Footer />
             </StyledContainer>
           </>

@@ -21,32 +21,59 @@ class AppBar extends Component {
 
     const authLinks = (
       <>
-        <a style={{ textDecoration: 'none' }}>
+        <Link
+          to="/dashboard"
+          style={{
+            textDecoration: 'none ',
+          }}
+        >
+          <Button signup border>
+            <span> Dashboard </span>{' '}
+          </Button>{' '}
+        </Link>{' '}
+        <a
+          style={{
+            textDecoration: 'none',
+          }}
+        >
           <Button signup border onClick={this.onLogoutClick}>
-            <span>Logout</span>
-          </Button>
+            <span> Logout </span>{' '}
+          </Button>{' '}
           <img
-            style = {{ width: '25px', marginRight: '5px' }}
+            style={{
+              width: '25px',
+              marginRight: '5px',
+            }}
             src={user.avatar}
             alt={user.name}
             title="You must have a Gravatar email for an avatar to display here"
           />
-        </a>
+        </a>{' '}
       </>
     );
 
     const guestLinks = (
       <>
-        <Link to="/login" style={{ textDecoration: 'none' }}>
+        <Link
+          to="/login"
+          style={{
+            textDecoration: 'none',
+          }}
+        >
           <Button signup border>
-            <span>Login</span>
-          </Button>
-        </Link>
-        <Link to="/register" style={{ textDecoration: 'none' }}>
+            <span> Login </span>{' '}
+          </Button>{' '}
+        </Link>{' '}
+        <Link
+          to="/register"
+          style={{
+            textDecoration: 'none',
+          }}
+        >
           <Button register border>
-            Register
-          </Button>
-        </Link>
+            Register{' '}
+          </Button>{' '}
+        </Link>{' '}
       </>
     );
 
@@ -54,27 +81,41 @@ class AppBar extends Component {
       <nav>
         <div className="row">
           <ul className="main-nav">
-            <Link to="/" style={{ textDecoration: 'none' }}>
-              <Button about>Home</Button>
+            <Link
+              to="/"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Button about> Home </Button>{' '}
             </Link>
-
-            <Link to="/contact" style={{ textDecoration: 'none' }}>
-              <Button about>Contact</Button>
-            </Link>
-            <Link to="/about" style={{ textDecoration: 'none' }}>
-              <Button about>About</Button>
-            </Link>
+            <Link
+              to="/contact"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Button about> Contact </Button>{' '}
+            </Link>{' '}
+            <Link
+              to="/about"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Button about> About </Button>{' '}
+            </Link>{' '}
             <div className="push">
               <Button signup border>
-                Like
-              </Button>
+                Like{' '}
+              </Button>{' '}
               <Button register border>
-                Share
-              </Button>
-              {isAuthenticated ? authLinks : guestLinks}
-            </div>
-          </ul>
-        </div>
+                Share{' '}
+              </Button>{' '}
+              {isAuthenticated ? authLinks : guestLinks}{' '}
+            </div>{' '}
+          </ul>{' '}
+        </div>{' '}
       </nav>
     );
   }
@@ -92,5 +133,8 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { logoutUser, clearCurrentProfile }
+  {
+    logoutUser,
+    clearCurrentProfile,
+  }
 )(AppBar);
