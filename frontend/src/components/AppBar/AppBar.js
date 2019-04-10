@@ -28,17 +28,17 @@ class AppBar extends Component {
           }}
         >
           <Button signup border>
-            <span> Dashboard </span>{' '}
-          </Button>{' '}
-        </Link>{' '}
+            <span> Dashboard </span>
+          </Button>
+        </Link>
         <a
           style={{
             textDecoration: 'none',
           }}
         >
           <Button signup border onClick={this.onLogoutClick}>
-            <span> Logout </span>{' '}
-          </Button>{' '}
+            <span> Logout </span>
+          </Button>
           <img
             style={{
               width: '25px',
@@ -48,7 +48,7 @@ class AppBar extends Component {
             alt={user.name}
             title="You must have a Gravatar email for an avatar to display here"
           />
-        </a>{' '}
+        </a>
       </>
     );
 
@@ -61,9 +61,9 @@ class AppBar extends Component {
           }}
         >
           <Button signup border>
-            <span> Login </span>{' '}
-          </Button>{' '}
-        </Link>{' '}
+            <span> Login </span>
+          </Button>
+        </Link>
         <Link
           to="/register"
           style={{
@@ -71,9 +71,9 @@ class AppBar extends Component {
           }}
         >
           <Button register border>
-            Register{' '}
-          </Button>{' '}
-        </Link>{' '}
+            Register
+          </Button>
+        </Link>
       </>
     );
 
@@ -87,7 +87,7 @@ class AppBar extends Component {
                 textDecoration: 'none',
               }}
             >
-              <Button about> Home </Button>{' '}
+              <Button about> Home </Button>
             </Link>
             <Link
               to="/contact"
@@ -95,27 +95,27 @@ class AppBar extends Component {
                 textDecoration: 'none',
               }}
             >
-              <Button about> Contact </Button>{' '}
-            </Link>{' '}
+              <Button about> Contact </Button>
+            </Link>
             <Link
               to="/about"
               style={{
                 textDecoration: 'none',
               }}
             >
-              <Button about> About </Button>{' '}
-            </Link>{' '}
+              <Button about> About </Button>
+            </Link>
             <div className="push">
               <Button signup border>
-                Like{' '}
-              </Button>{' '}
+                Like
+              </Button>
               <Button register border>
-                Share{' '}
-              </Button>{' '}
-              {isAuthenticated ? authLinks : guestLinks}{' '}
-            </div>{' '}
-          </ul>{' '}
-        </div>{' '}
+                Share
+              </Button>
+              {isAuthenticated ? authLinks : guestLinks}
+            </div>
+          </ul>
+        </div>
       </nav>
     );
   }
