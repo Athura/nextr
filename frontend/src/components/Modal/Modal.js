@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   ModalWrapper,
   ModalCard,
-  Background,
+  BackgroundNorm,
   CloseButton,
 } from './Modal.style';
 
@@ -31,7 +31,7 @@ const Modal = ({ children, toggle, open }) => (
           </CloseButton>
           {children}
         </ModalCard>
-        <Background onClick={toggle} />
+        <BackgroundNorm onClick={toggle} />
       </ModalWrapper>
     )}
   </Portal>
