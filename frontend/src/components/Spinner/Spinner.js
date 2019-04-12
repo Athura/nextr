@@ -21,15 +21,12 @@ const OuterSpinnerOne = styled.div`
   border-radius: 50%;
 `;
 
-const Spinner = () => {
-    return (
-        <>
-            <StyledSpinner>
-                <OuterSpinnerOne></OuterSpinnerOne>
-                <OuterSpinnerTwo></OuterSpinnerTwo>
-            </StyledSpinner>
-        </>
-    );
-};
+const Spinner = () => (
+  <>
+    <StyledSpinner>
+      <OuterSpinnerOne> </OuterSpinnerOne> <OuterSpinnerTwo> </OuterSpinnerTwo>
+    </StyledSpinner>
+  </>
+);
 
 export default Spinner;
