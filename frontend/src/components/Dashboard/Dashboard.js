@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profileActions';
 
 import Spinner from '../Spinner/Spinner';
+import CreateProfile from './CreateProfile/CreateProfile';
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -25,7 +26,7 @@ class Dashboard extends Component {
         dashboardContent = <h4> DISPLAY PROFILE HERE </h4>;
       } else {
         // TODO: Component no profile goes here so they enter the multistep form to create a profile
-        dashboardContent = <h4> DISPLAY NO PROFILE HERE </h4>;
+        dashboardContent = <CreateProfile />;
       }
     }
 

@@ -20,6 +20,7 @@ import Login from './components/auth/Login';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard';
+import CreateProfile from './components/Dashboard/CreateProfile/CreateProfile';
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -76,6 +77,12 @@ class App extends Component {
               <Route path="/about" component={About} />
               <Switch>
                 <ProtectedRoute path="/dashboard" component={Dashboard} />
+              </Switch>
+              <Switch>
+                <ProtectedRoute
+                  path="/create-profile"
+                  component={CreateProfile}
+                />
               </Switch>
               <Footer />
             </StyledContainer>
